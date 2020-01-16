@@ -32,20 +32,20 @@ namespace WitProjekt
             }
         }
 
-        // Metoda wypisujaca blad zapytania
+        // Sets error message to the error textbox
         public void printError(string errMessage)
         {
             outputError.Text = errMessage;
         }
 
-        // Metoda wpisujaca odpowiedz z requesta do textBoxa
+        // Sets response the result textbox
         public void setResponseMessage(string response)
         {
             outputBox.Text = response;
             this.clearLogsBox();
         }
 
-        // Czyszczenie logboxa
+        // Cleans logbox
         public void clearLogsBox()
         {
             if (outputError.Text != "")
