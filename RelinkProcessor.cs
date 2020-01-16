@@ -4,10 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Net.Http;
+using Newtonsoft.Json;
 
 namespace WitProjekt
 {
     class RelinkProcessor
+
     {
         public static async Task<RelinkModel> PostLink(string link = "")
         {
@@ -15,8 +17,14 @@ namespace WitProjekt
 
             string jsonParams = @"{
                 'url': '" + link + "'}";
-            Console.WriteLine(jsonParams);
-            StringContent queryString = new StringContent(jsonParams, Encoding.UTF8, "application/json");
+
+            var values = new Dictionary<string, string>
+            {
+                { "url",  link}
+            };
+            var content = JsonConvert.SerializeObject(values);
+
+            StringContent queryString = new StringContent(content, Encoding.UTF8, "application/json");
 
 
             using (HttpResponseMessage response = await Api.ApiClient.PostAsync(url, queryString))

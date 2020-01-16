@@ -11,5 +11,10 @@ namespace WitProjekt
         public string hashid { get; set; }
         public string url { get; set; }
         public string createdAt { get; set; }
+
+        public string convertOutputHash()
+        {
+            return "https://rel.ink/" + this.hashid;
+        }
     }
 }

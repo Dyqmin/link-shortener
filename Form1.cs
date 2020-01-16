@@ -22,7 +22,9 @@ namespace WitProjekt
 
         private async void button1_Click(object sender, EventArgs e)
         {
-            var relink = await RelinkProcessor.PostLink("https://facebook.com");
+            string inputLink = inputBox.Text;
+            var relink = await RelinkProcessor.PostLink(inputLink);
+            outputBox.Text = relink.convertOutputHash();
         }
 
     }
