@@ -15,6 +15,15 @@ namespace WitProjekt
         public Form1()
         {
             InitializeComponent();
+            // Utworzenie klienta API
+            Api.InitializeClient();
+
         }
+
+        private async void button1_Click(object sender, EventArgs e)
+        {
+            var relink = await RelinkProcessor.PostLink("https://facebook.com");
+        }
+
     }
 }
