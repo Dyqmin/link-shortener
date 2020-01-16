@@ -23,8 +23,17 @@ namespace WitProjekt
         private async void button1_Click(object sender, EventArgs e)
         {
             string inputLink = inputBox.Text;
-            var relink = await RelinkProcessor.PostLink(inputLink);
-            outputBox.Text = relink.convertOutputHash();
+            try
+            {
+                var relink = await RelinkProcessor.PostLink(inputLink);
+                outputBox.Text = relink.convertOutputHash();
+                outputError.Text = "";
+
+            }
+            catch (Exception err)
+            {
+                outputError.Text = err.Message;
+            }
         }
 
     }

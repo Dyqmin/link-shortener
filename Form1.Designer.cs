@@ -33,6 +33,9 @@
             this.outputBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.outputError = new System.Windows.Forms.Label();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
@@ -77,11 +80,33 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Wygenerowany link";
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.outputError);
+            this.groupBox1.Location = new System.Drawing.Point(29, 138);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(310, 40);
+            this.groupBox1.TabIndex = 5;
+            this.groupBox1.TabStop = false;
+            // 
+            // outputError
+            // 
+            this.outputError.AutoSize = true;
+            this.outputError.BackColor = System.Drawing.Color.Transparent;
+            this.outputError.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.outputError.ForeColor = System.Drawing.Color.Red;
+            this.outputError.Location = new System.Drawing.Point(6, 16);
+            this.outputError.Name = "outputError";
+            this.outputError.Size = new System.Drawing.Size(73, 13);
+            this.outputError.TabIndex = 0;
+            this.outputError.Text = "teesdfaasdf";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(649, 249);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.outputBox);
@@ -89,6 +114,8 @@
             this.Controls.Add(this.button1);
             this.Name = "Form1";
             this.Text = " ";
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -101,6 +128,8 @@
         private System.Windows.Forms.TextBox outputBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label outputError;
     }
 }
 
