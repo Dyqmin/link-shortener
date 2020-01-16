@@ -15,7 +15,6 @@ namespace WitProjekt
         public Form1()
         {
             InitializeComponent();
-            // Utworzenie klienta API
             Api.InitializeClient();
         }
 
