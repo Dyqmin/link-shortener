@@ -13,26 +13,21 @@ namespace WitProjekt
     {
         public static async Task<RelinkModel> PostLink(string link = "")
         {
-            string url = "https://rel.ink/api/links/";
+            string baseUrl = "https://rel.ink/api/links/";
 
-            string jsonParams = @"{
-                'url': '" + link + "'}";
-
-            var values = new Dictionary<string, string>
+            var inputObject = new Dictionary<string, string>
             {
                 { "url",  link}
             };
-            var content = JsonConvert.SerializeObject(values);
+            var inputBody = JsonConvert.SerializeObject(inputObject);
 
-            StringContent queryString = new StringContent(content, Encoding.UTF8, "application/json");
+            StringContent queryString = new StringContent(inputBody, Encoding.UTF8, "application/json");
 
-
-            using (HttpResponseMessage response = await Api.ApiClient.PostAsync(url, queryString))
+            using (HttpResponseMessage response = await Api.ApiClient.PostAsync(baseUrl, queryString))
             {
                 if (response.IsSuccessStatusCode)
                 {
                     RelinkModel relink = await response.Content.ReadAsAsync<RelinkModel>();
-
                     return relink;
                 }
                 else

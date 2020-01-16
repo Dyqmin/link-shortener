@@ -22,7 +22,6 @@ namespace WitProjekt
             ApiClient = new HttpClient();
             ApiClient.DefaultRequestHeaders.Accept.Clear();
             ApiClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-
         }
     }
 }
