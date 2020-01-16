@@ -1,7 +1,6 @@
 C:\Users\Domin\source\repos\WitProjekt\WitProjekt\bin\Debug\WitProjekt.exe.config
 C:\Users\Domin\source\repos\WitProjekt\WitProjekt\bin\Debug\WitProjekt.exe
 C:\Users\Domin\source\repos\WitProjekt\WitProjekt\bin\Debug\WitProjekt.pdb
-C:\Users\Domin\source\repos\WitProjekt\WitProjekt\obj\Debug\WitProjekt.csprojAssemblyReference.cache
 C:\Users\Domin\source\repos\WitProjekt\WitProjekt\obj\Debug\WitProjekt.Form1.resources
 C:\Users\Domin\source\repos\WitProjekt\WitProjekt\obj\Debug\WitProjekt.Properties.Resources.resources
 C:\Users\Domin\source\repos\WitProjekt\WitProjekt\obj\Debug\WitProjekt.csproj.GenerateResource.cache

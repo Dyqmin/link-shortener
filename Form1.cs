@@ -26,15 +26,34 @@ namespace WitProjekt
             try
             {
                 var relink = await RelinkProcessor.PostLink(inputLink);
-                outputBox.Text = relink.convertOutputHash();
-                outputError.Text = "";
-
+                this.setResponseMessage(relink.convertOutputHash());
             }
             catch (Exception err)
             {
-                outputError.Text = err.Message;
+                this.printError(err.Message);
             }
         }
 
+        // Metoda wypisujaca blad zapytania
+        public void printError(string errMessage)
+        {
+            outputError.Text = errMessage;
+        }
+
+        // Metoda wpisujaca odpowiedz z requesta do textBoxa
+        public void setResponseMessage(string response)
+        {
+            outputBox.Text = response;
+            this.clearLogsBox();
+        }
+
+        // Czyszczenie logboxa
+        public void clearLogsBox()
+        {
+            if (outputError.Text != "")
+            {
+                outputError.Text = "";
+            }
+        }
     }
 }

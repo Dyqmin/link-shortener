@@ -35,6 +35,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.outputError = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -88,6 +89,7 @@
             this.groupBox1.Size = new System.Drawing.Size(310, 40);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Logi";
             // 
             // outputError
             // 
@@ -97,23 +99,35 @@
             this.outputError.ForeColor = System.Drawing.Color.Red;
             this.outputError.Location = new System.Drawing.Point(6, 16);
             this.outputError.Name = "outputError";
-            this.outputError.Size = new System.Drawing.Size(73, 13);
+            this.outputError.Size = new System.Drawing.Size(0, 13);
             this.outputError.TabIndex = 0;
-            this.outputError.Text = "teesdfaasdf";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(253, 187);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(86, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Dominik Donoch";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(649, 249);
+            this.ClientSize = new System.Drawing.Size(350, 209);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.outputBox);
             this.Controls.Add(this.inputBox);
             this.Controls.Add(this.button1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form1";
-            this.Text = " ";
+            this.Text = " Skracacz linkow";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -130,6 +144,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label outputError;
+        private System.Windows.Forms.Label label3;
     }
 }
 
